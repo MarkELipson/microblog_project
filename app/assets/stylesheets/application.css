@@ -11,3 +11,194 @@
  *= require_self
  *= require_tree .
  */
+ @import url(http://fonts.googleapis.com/css?family=Erica+One);
+
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #FFB347;
+}
+
+.site-wrapper {
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+}
+
+.splash-login-box {
+	width: 33%;
+	min-width: 600px;
+	height: 33%;
+	min-height: 300px;
+	margin: auto;
+	position: absolute;
+  	top: 0; bottom: 0; left: 0; right: 0;
+	background-color: #FFFFFF;
+	padding:10px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #444444;
+}
+
+.splash-login-box input[type="text"], input[type="password"] {
+	display:block;
+	width:66%;
+	height:30%;
+	margin:10px auto;
+	line-height: 1.75em;
+	font-size: 1.5em;
+	border: thin solid black;
+	border-radius: 5px;
+	
+}
+
+.splash-login-box input[type="submit"] {
+	display:block;
+	width:33%;
+	height:30%;
+	margin:10px auto;
+	line-height: 1.75em;
+	font-size: 1.5em;
+	border: thin solid black;
+	border-radius: 5px;
+}
+
+.splash-login-box input[type="submit"]:hover {
+	background-color: orange;
+	cursor: pointer;
+}
+
+.splash-login-box .splash-title-container .title-text{
+	margin:0 auto;
+	font-family: 'Erica One', cursive;
+	font-size: 50px;
+	color: #CC5000;
+	text-align: center;
+}
+
+.splash-login-box  .splash-title-container .sub-title-text{
+	margin:0 auto;
+	font-family: 'Erica One', cursive;
+	font-size: 20px;
+	color: #CC5000;
+	text-align: center;
+}
+
+.splash-login-box .splash-register-link {
+	text-align: right;
+	font-family: Arial;
+}
+
+.site-header {
+	display:inline-block;
+	width: 100%;
+	min-width: 50%;
+	height: 10%;
+	border-bottom: 3px solid black;
+	padding: 5px;
+}
+
+.site-left-column {
+	float:left;
+	display: inline-block;
+	width: 17%;
+	height: 80%;
+	padding: 5px;
+	border-right: 3px solid black;
+}
+
+.site-right-column {
+	float:left;
+	display: inline-block;
+	width: 83%;
+	height: 80%;
+	padding: 5px;
+}
+
+.site-footer {
+	display: inline-block;
+	width: 100%;
+	height: 10%;
+	padding: 5px;
+	border-top: 3px solid black;
+}
+
+.title-text{
+	font-family: 'Erica One', cursive;
+	font-size: 30px;
+	color: #CC5000;
+	margin-left: 5px;
+}
+
+.site-header-left {
+	float: left;
+	vertical-align: middle;
+	width: 34%;
+	height:100%;
+	display: inline-block;
+}
+
+.site-header-right {
+	float: left;
+	vertical-align: middle;
+	width: 66%;
+	height:100%;
+	display: inline-block;
+	text-align: right;
+}
+
+.header-link {
+	display: inline-block;
+	vertical-align: middle;
+	font: 24px Arial;
+}
+
+.left-column-link {
+	display: block;
+	vertical-align: middle;
+	font: 24px Arial;
+}
+
+.left-column-button {
+	padding:2px;
+	display:block;
+	margin: 5px auto;
+	width:66%;
+	vertical-align: center;
+	line-height: 1.75em;
+	font-size: 1.5em;
+	border: thin solid black;
+	background-color: #77DD77;
+	border-radius: 5px;
+}
+
+.left-column-button:hover {
+	background-color: green;
+	cursor: pointer;
+}
+
+.logout-button {
+	padding:2px;
+	display:inline-block;
+	vertical-align: center;
+	line-height: 1.75em;
+	font-size: 1.5em;
+	border: thin solid black;
+	background-color: #FDFD96;
+	border-radius: 5px;
+}
+
+.logout-button:hover {
+	background-color: yellow;
+	cursor: pointer;
+}

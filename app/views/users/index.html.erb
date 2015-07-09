@@ -1,5 +1,23 @@
-<% @users.each do |u| %>
+<!-- ORIGINAL CODE<% @users.each do |u| %>
   <p>
     <%= u.username %> - <%= u.posts.count %>
   </p>
 <% end %>
+-->
+
+<div class="splash-login-box">
+
+	<div class="splash-title-container">
+		<p class="title-text">FLAMEWARS</p>
+		<p class="sub-title-text">'cause someones always wrong on the internet<p>
+	</div>
+	
+	<%= form_tag '/sessions' do %>
+	  <%= text_field_tag :username, nil, placeholder: "Username" %>
+	  <%= password_field_tag :password, nil, placeholder: "Password" %>
+	  <%= submit_tag "Log In" %>
+	<% end %>
+	
+	<a href="#"><p class="splash-register-link">New? Register here.</p></a>
+
+</div>

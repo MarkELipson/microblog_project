@@ -1,5 +1,5 @@
 <header>
-  <% if current_user %>
+  <!-- ORIGINAL CODE <% if current_user %>
     <%= link_to "Sign Out", '/logout', method: :delete %>
   <% else %>
     <%= form_tag '/sessions' do %>
@@ -7,7 +7,7 @@
       <%= password_field_tag :password, nil, placeholder: "Password" %>
       <%= submit_tag "Log In" %>
     <% end %>
-  <% end %>
+  <% end %> -->
 
   <% if flash[:alert] %>
     <div style="background:yellow;">
