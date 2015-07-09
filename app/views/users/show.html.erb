@@ -1,24 +1,33 @@
 <div class="site-wrapper">
+
 	<div class="site-header">
+	
 		<div class="site-header-left">
 			<p class="title-text">FLAMEWAR</p>
 		</div>
-		<div class="site-header-right">
-			<button class="logout-button">Logout</button>
 		
+		<div class="site-header-right">
+			<%= link_to("Log out", session_path(current_user.id), method: :delete, class:"logout-button")%>
 		</div>
+		
 	</div>
+	
 	<div class="site-left-column">
-		<button class="left-column-button">Profile</button>
-		<button class="left-column-button">Posts</button>
-		<button class="left-column-button">Feed?</button>
+	
+		<a class="left-column-button">Profile</a>
+		<a class="left-column-button">Posts</a>
+		<a class="left-column-button">Feed?</a>
 		<p>all buttons in the column render pages into the right column</p>
+		
 	</div>
+	
 	<div class="site-right-column">
-	<p>all pages on the site render here</p>
+		<p>all pages on the site render here</p>
 		<%=yield%>
 	</div>
+	
 	<div class="site-footer">
 		<p>Copyright 1971 - Pierre Cosmybladrzhempti</p>
 	</div>
+	
 </div>
