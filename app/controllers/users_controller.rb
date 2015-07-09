@@ -18,6 +18,9 @@ class UsersController < ApplicationController
       redirect_to new_post_path
     end
   end
+  
+  def show
+  end
 
   private
 
