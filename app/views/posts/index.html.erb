@@ -1,6 +1,34 @@
-<% if current_user %>
-  <%= link_to "Create New Post", new_post_path %>
-<% end %>
+<div class="site-wrapper">
 
-<%= render partial: 'post', collection: @posts, locals: {truncate_post: true} %>
+	<div class="site-header">
+	
+		<div class="site-header-left">
+			<p class="title-text">FLAMEWAR</p>
+		</div>
+		
+		<div class="site-header-right">
+			<%= link_to("Log out", session_path(current_user.id), method: :delete, class:"logout-button")%>
+		</div>
+		
+	</div>
+	
+	<div class="site-left-column">
+	
+		<a class="left-column-button" href="/posts/new">New Post</a>
+		<a class="left-column-button" href="/posts">All Posts</a>
+		
+	</div>
+	
+	<div class="site-right-column">
+		<% if current_user %>
+			<%= link_to "Create New Post", new_post_path %>
+		<% end %>
 
+		<%= render partial: 'post', collection: @posts, locals: {truncate_post: true} %>
+	</div>
+	
+	<div class="site-footer">
+		<p>Copyright 1971 - Pierre Cosmybladrzhempti</p>
+	</div>
+	
+</div>

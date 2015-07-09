@@ -1,14 +1,42 @@
-<%= render @post %>
+<div class="site-wrapper">
 
-<%= form_for Comment.new do |f| %>
-  <%= f.text_area :body %>
-  <%= f.hidden_field :post_id, value: @post.id %>
-  <%= f.submit :submit %>
-<% end %>
+	<div class="site-header">
+	
+		<div class="site-header-left">
+			<p class="title-text">FLAMEWAR</p>
+		</div>
+		
+		<div class="site-header-right">
+			<%= link_to("Log out", session_path(current_user.id), method: :delete, class:"logout-button")%>
+		</div>
+		
+	</div>
+	
+	<div class="site-left-column">
+	
+		<a class="left-column-button" href="/posts/new">New Post</a>
+		<a class="left-column-button" href="/posts">All Posts</a>
+		
+	</div>
+	
+	<div class="site-right-column">
+		<%= render @post %>
 
-<% @post.comments.each do |comment| %>
-  <p>
-    <%= comment.body %>
-  </p>
-<% end %>
+		<%= form_for Comment.new do |f| %>
+		  <%= f.text_area :body %>
+		  <%= f.hidden_field :post_id, value: @post.id %>
+		  <%= f.submit :submit %>
+		<% end %>
 
+		<% @post.comments.each do |comment| %>
+		  <p>
+			<%= comment.body %>
+		  </p>
+		<% end %>
+	</div>
+	
+	<div class="site-footer">
+		<p>Copyright 1971 - Pierre Cosmybladrzhempti</p>
+	</div>
+	
+</div>

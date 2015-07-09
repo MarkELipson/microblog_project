@@ -1,8 +1,37 @@
-<h1> Compose post  </h2>
-<%= form_for @post do |f| %>
-  <%= f.label :title %><br>
-  <%= f.text_field :title %><br>
-  <%= f.label :body %><br>
-  <%= f.text_area :body %><br>
-  <%= f.submit "Publish" %>
-<% end %>
+<div class="site-wrapper">
+
+	<div class="site-header">
+	
+		<div class="site-header-left">
+			<p class="title-text">FLAMEWAR</p>
+		</div>
+		
+		<div class="site-header-right">
+			<%= link_to("Log out", session_path(current_user.id), method: :delete, class:"logout-button")%>
+		</div>
+		
+	</div>
+	
+	<div class="site-left-column">
+	
+		<a class="left-column-button" href="/posts/new">New Post</a>
+		<a class="left-column-button" href="/posts">All Posts</a>
+		
+	</div>
+	
+	<div class="site-right-column">
+		<h1> Compose post  </h2>
+		<%= form_for @post do |f| %>
+		  <%= f.label :title %><br>
+		  <%= f.text_field :title %><br>
+		  <%= f.label :body %><br>
+		  <%= f.text_area :body %><br>
+		  <%= f.submit "Publish" %>
+		<% end %>
+	</div>
+	
+	<div class="site-footer">
+		<p>Copyright 1971 - Pierre Cosmybladrzhempti</p>
+	</div>
+	
+</div>
