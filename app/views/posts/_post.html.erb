@@ -1,0 +1,17 @@
+<article class="post">
+    <h2>
+      <%= link_to post.title, post_path(post) %>
+    </h2>
+    <p class='post-body'>
+      <% if local_assigns.fetch(:truncate_post, false) %>
+        <%= truncate post.body, length: 200 %>
+      <% else %>
+        <%= post.body %>
+      <% end %>
+    </p>
+    <p class='post-attribution'>
+      Posted by <%= post.user.username %>
+      at <%= post.created_at %>
+
+    </p>
+  </article>

@@ -1,0 +1,14 @@
+<%= render @post %>
+
+<%= form_for Comment.new do |f| %>
+  <%= f.text_area :body %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.submit :submit %>
+<% end %>
+
+<% @post.comments.each do |comment| %>
+  <p>
+    <%= comment.body %>
+  </p>
+<% end %>
+

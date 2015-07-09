@@ -1,0 +1,22 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+#container{
+  width: 1360px;
+  margin: 0 auto;
+}
+
+header {
+  background: rgba(89, 200, 99, 0.45);
+  padding: 15px 20px 15px 20px;
+}
+
+header input[type="submit"] {
+  font-size: 0.4em!important;
+}
+
+main {
+  background: lightsalmon;
+  padding: 15px 20px 15px 20px;
+}
+
