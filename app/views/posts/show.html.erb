@@ -30,7 +30,10 @@
 
 		<% @post.comments.each do |comment| %>
 		  <p>
+			<%= comment.user.username%>
 			<%= comment.body %>
+			<%= comment.created_at %>
+    </p>
 		  </p>
 		<% end %>
 	</div>

@@ -20,10 +20,6 @@
 	</div>
 	
 	<div class="site-right-column">
-		<% if current_user %>
-			<%= link_to "Create New Post", new_post_path %>
-		<% end %>
-
 		<%= render partial: 'post', collection: @posts, locals: {truncate_post: true} %>
 	</div>
 	
