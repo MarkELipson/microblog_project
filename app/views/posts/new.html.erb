@@ -3,7 +3,7 @@
 	<div class="site-header">
 	
 		<div class="site-header-left">
-			<p class="title-text">FLAMEWAR</p>
+			<p class="title-text">FLAMEWARS</p>
 		</div>
 		
 		<div class="site-header-right">
@@ -20,14 +20,16 @@
 	</div>
 	
 	<div class="site-right-column">
-		<h1> Compose post  </h2>
-		<%= form_for @post do |f| %>
-		  <%= f.label :title %><br>
-		  <%= f.text_field :title %><br>
-		  <%= f.label :body %><br>
-		  <%= f.text_area :body %><br>
-		  <%= f.submit "Publish" %>
-		<% end %>
+		<div class="new-post-form">
+			<p class="new-post-form-title"> Compose post  </p>
+			<%= form_for @post do |f| %>
+				<%= f.label :title %><br>
+				<%= f.text_field :title, placeholder: "Post Title"  %><br>
+				<%= f.label :body %><br>
+				<%= f.text_area :body, :cols => "25", :rows => "5", placeholder: "Enter your post"   %><br>
+				<%= f.submit "Publish" %>
+			<% end %>
+		</div>
 	</div>
 	
 	<div class="site-footer">

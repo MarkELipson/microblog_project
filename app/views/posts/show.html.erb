@@ -3,7 +3,7 @@
 	<div class="site-header">
 	
 		<div class="site-header-left">
-			<p class="title-text">FLAMEWAR</p>
+			<p class="title-text">FLAMEWARS</p>
 		</div>
 		
 		<div class="site-header-right">
@@ -20,22 +20,26 @@
 	</div>
 	
 	<div class="site-right-column">
-		<%= render @post %>
+		<div class="post-content">
+			<%= render @post %>
+			
+			<p class="comments-title">Comments</p>
+			
+			<% @post.comments.each do |comment| %>
+			  <div class="comment">
+				<p class="comment-body"><%= comment.body %></p>
+				<p class="comment-info">Posted by - <%= comment.user.username%> at <%= comment.created_at %></p>
+			  </div>
+			<% end %>
 
-		<%= form_for Comment.new do |f| %>
-		  <%= f.text_area :body %>
-		  <%= f.hidden_field :post_id, value: @post.id %>
-		  <%= f.submit :submit %>
-		<% end %>
+			<%= form_for Comment.new do |f| %>
+			  <%= f.text_area :body, :cols => "15", :rows => "4", placeholder: "Enter a comment" %>
+			  <%= f.hidden_field :post_id, value: @post.id %>
+			  <%= f.submit :submit %>
+			<% end %>
 
-		<% @post.comments.each do |comment| %>
-		  <p>
-			<%= comment.user.username%>
-			<%= comment.body %>
-			<%= comment.created_at %>
-    </p>
-		  </p>
-		<% end %>
+			
+		</div>
 	</div>
 	
 	<div class="site-footer">

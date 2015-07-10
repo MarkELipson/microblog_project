@@ -3,7 +3,7 @@
 	<div class="site-header">
 	
 		<div class="site-header-left">
-			<p class="title-text">FLAMEWAR</p>
+			<p class="title-text">FLAMEWARS</p>
 		</div>
 		
 		<div class="site-header-right">
@@ -20,7 +20,10 @@
 	</div>
 	
 	<div class="site-right-column">
-		<%= render partial: 'post', collection: @posts, locals: {truncate_post: true} %>
+		<div class="post-list">
+			<p class="post-list-title">All Posts</p>
+			<%= render partial: 'post', collection: @posts, locals: {truncate_post: true} %>
+		</div>
 	</div>
 	
 	<div class="site-footer">
