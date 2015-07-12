@@ -4,18 +4,17 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
   end
 
   def create
-    if params[:user][:password] == params[:password_confirmation]
+    if ((params[:user][:password] == params[:password_confirmation]) && !(params[:user][:username].to_s.blank?))
       @user = User.create user_params
       session[:user_id] = @user.id
       flash[:notice] = "Thanks for Signing Up"
       redirect_to posts_path
     else
-      flash[:alert] = "Your password did not match confirmation"
-      redirect_to new_post_path
+      flash[:alert] = "Please verify your information"
+      redirect_to "/users/new"
     end
   end
   

@@ -40,7 +40,7 @@ body {
 	width: 33%;
 	min-width: 600px;
 	height: 33%;
-	min-height: 300px;
+	min-height: 325px;
 	margin: auto;
 	position: absolute;
   	top: 0; bottom: 0; left: 0; right: 0;
@@ -132,6 +132,7 @@ body {
 	height: 10%;
 	padding: 5px;
 	border-top: 3px solid black;
+	text-align: right;
 }
 
 .title-text{
@@ -157,6 +158,11 @@ body {
 	height:100%;
 	display: inline-block;
 	text-align: right;
+}
+.header-welcome-text {
+	display: inline-block;
+	margin-right:1%;
+	font:18px Arial;
 }
 
 .header-link {
@@ -365,4 +371,74 @@ body {
 .post-list .post .post-attribution {
 	margin-top: 1%;
 	font: 10px Arial;
+}
+
+.signup-box {
+	width: 33%;
+	min-width: 600px;
+	height: 33%;
+	min-height: 350px;
+	margin: auto;
+	position: absolute;
+  	top: 0; bottom: 0; left: 0; right: 0;
+	background-color: #FFFFFF;
+	padding:10px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px #444444;
+}
+
+.signup-box input[type="text"], input[type="password"] {
+	display:block;
+	width:66%;
+	height:30%;
+	margin:10px auto;
+	line-height: 1.75em;
+	font-size: 1.5em;
+	border: thin solid black;
+	border-radius: 5px;
+}
+
+.signup-box input[type="submit"] {
+	display:block;
+	width:33%;
+	height:30%;
+	margin:10px auto;
+	line-height: 1.75em;
+	font-size: 1.5em;
+	border: thin solid black;
+	border-radius: 5px;
+	background-color: #FFB347;
+}
+
+.signup-box input[type="submit"]:hover {
+	background-color: orange;
+	cursor: pointer;
+}
+
+.signup-box .signup-title-container .title-text{
+	margin:0 auto;
+	font-family: 'Erica One', cursive;
+	font-size: 50px;
+	color: #CC5000;
+	text-align: center;
+}
+
+.signup-box  .signup-title-container .sub-title-text{
+	margin:0 auto;
+	font-family: 'Erica One', cursive;
+	font-size: 20px;
+	color: #CC5000;
+	text-align: center;
+}
+
+.signup-box .signup-register-link {
+	text-align: right;
+	font-family: Arial;
+}
+
+.alert {
+	background-color: yellow;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
 }
